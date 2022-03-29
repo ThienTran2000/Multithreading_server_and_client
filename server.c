@@ -31,8 +31,8 @@ void *input()
 {
     while(strcmp("x\n", valinput)!=0)
     {
-    fgets(valinput, sizeof(valinput), stdin);
-    fflush(stdin);
+        fgets(valinput, sizeof(valinput), stdin);
+        fflush(stdin);
     }
     pthread_cancel(thread[0]);
     pthread_cancel(thread[1]);
