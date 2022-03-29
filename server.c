@@ -63,7 +63,6 @@ void *mythread0()
     printf("%s:%d disconnected\n", data_thread[0].addr, data_thread[0].port); 
     close(data_thread[0].new_socket); // dong socket
 
-    pthread_join(thread[0], NULL); //huy thread
     pthread_create(&thread[0],NULL, mythread0, NULL);//tao lai thread
 }
 
@@ -89,7 +88,6 @@ void *mythread1()
     printf("%s:%d disconnected\n", data_thread[1].addr, data_thread[1].port); 
     close(data_thread[1].new_socket);
 
-    pthread_join(thread[1], NULL);
     pthread_create(&thread[1],NULL, mythread1, NULL);
 }
 
@@ -115,7 +113,6 @@ void *mythread2()
     printf("%s:%d disconnected\n", data_thread[2].addr, data_thread[2].port); 
     close(data_thread[2].new_socket);
 
-    pthread_join(thread[2], NULL);
     pthread_create(&thread[2],NULL, mythread2, NULL);
 }
 
